@@ -1,0 +1,28 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.enhancedColorization": "enabled",
+    "C_Cpp.suggestSnippets": true,
+    "C_Cpp.autoAddFileAssociations": true,
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "files.encoding": "gb2312",
+    "files.autoGuessEncoding": false,
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.s": "armasm",
+        "*.inc": "armasm"
+    },
+    "search.exclude": {
+        "**/OBJ": true,
+        "**/*.o": true,
+        "**/*.d": true,
+        "**/*.crf": true,
+        "**/*.map": true,
+        "**/*.hex": true,
+        "**/*.axf": true
+    }
+} 

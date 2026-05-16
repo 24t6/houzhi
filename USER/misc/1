@@ -1,0 +1,30 @@
+#ifndef __ESP8266_H
+#define __ESP8266_H
+
+#include "stm32f4xx.h"
+
+typedef enum {
+    ESP8266_OK,
+    ESP8266_ERROR,
+    ESP8266_TIMEOUT
+} ESP8266_Status;
+
+/* 保持与原来一致的缓冲区大小 */
+extern char esp8266_rx_buffer[1024];
+extern volatile uint16_t esp8266_rx_index;
+extern uint8_t esp8266_mqtt_connected;
+
+/* 函数声明 */
+void ESP8266_ClearBuffer(void);
+void UART5_Rx_Callback(uint8_t data);
+ESP8266_Status ESP8266_SendCmdWait(const char* cmd, const char* expect1, const char* expect2, uint32_t timeout_ms);
+void ESP8266_Init(void);
+ESP8266_Status ESP8266_ConnectWiFi(const char* ssid, const char* password);
+ESP8266_Status ESP8266_ConfigMQTT(void);
+ESP8266_Status ESP8266_ConnectMQTT(void);
+/* 订阅OneNet回复主题 */
+ESP8266_Status ESP8266_SubscribeReply(void);
+/* 发布数据到MQTT主题 */
+ESP8266_Status ESP8266_PublishData(const char* topic, const char* json_data);
+
+#endif

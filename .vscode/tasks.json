@@ -1,0 +1,68 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build STM32 Project",
+            "type": "shell",
+            "command": "C:/Keil_v5/UV4/UV4.exe",
+            "args": [
+                "-b",
+                "${workspaceFolder}/USER/WHEELTEC.uvprojx"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                {
+                    "owner": "armcc",
+                    "fileLocation": ["relative", "${workspaceFolder}"],
+                    "pattern": {
+                        "regexp": "^(.*)\\((\\d+)\\):\\s+(warning|error)\\s+(\\d+):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "code": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Clean STM32 Project",
+            "type": "shell",
+            "command": "C:/Keil_v5/UV4/UV4.exe",
+            "args": [
+                "-c",
+                "${workspaceFolder}/USER/WHEELTEC.uvprojx"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Kill Keil Processes",
+            "type": "shell",
+            "command": "${workspaceFolder}/keilkilll.bat",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+} 
