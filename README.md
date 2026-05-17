@@ -1,4 +1,4 @@
-# 后智 (Houzhi) — 雷达融合预警系统
+# vehicle-rear — 雷达融合预警系统
 
 <p align="center">
   <img src="https://img.shields.io/badge/MCU-STM32F4-03234B?style=for-the-badge&logo=stmicroelectronics">
@@ -29,7 +29,7 @@
 
 **后智** 是 STM32F4 平台的雷达融合预警系统，作为车辆辅助安全系统的后端数据处理单元。系统采集多路雷达传感器数据，融合分析后输出障碍物预警信息，并通过 ESP8266 上传至云平台。
 
-与 [**前智 (Qianzhi)**](https://github.com/24t6/qianzhi) 门禁系统配合使用，形成完整的车辆出入+安全预警方案。
+与 [**前智 (Qianzhi)**](https://github.com/24t6/vehicle-front) 门禁系统配合使用，形成完整的车辆出入+安全预警方案。
 
 ---
 
@@ -167,5 +167,5 @@ App_ProcessUpload()
 ---
 
 <p align="center">
-  <sub>Built with ❤️ using STM32 · 配合 <a href="https://github.com/24t6/qianzhi">前智 (Qianzhi)</a> 使用</sub>
+  <sub>Built with ❤️ using STM32 · 配合 <a href="https://github.com/24t6/vehicle-front">前智 (Qianzhi)</a> 使用</sub>
 </p>
